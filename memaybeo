@@ -1,0 +1,12 @@
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+
+]]--
+
+repeat wait();until game:IsLoaded() and game.Players.LocalPlayer  repeat wait();until game.Workspace:FindFirstChild("__Main") and game.Workspace:FindFirstChild("__Extra")  local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/jensonhirst/Orion/main/source"))();local v1=v0:MakeWindow({Name="Pịa Hub - Pịa xào me",HidePremium=false,SaveConfig=false,ConfigFolder="AutoHub"});local v2="autohub_settings.json";local v3=game:GetService("HttpService");local v4={};pcall(function() if isfile(v2) then v4=v3:JSONDecode(readfile(v2));end end);local function v5() writefile(v2,v3:JSONEncode(v4));end local v6=v1:MakeTab({Name="Main",Icon="rbxassetid://6031071050",PremiumOnly=false});local v7={{Name="Auto Bypass",Key="AutoBypass",Script="https://raw.githubusercontent.com/skyemngu13/hee/refs/heads/main/bypass"},{Name="Auto Kill Dungeon",Key="AutoKillDungeon",Script="https://raw.githubusercontent.com/skyemngu13/hee/refs/heads/main/automobdungeon"},{Name="Auto Farm Mori",Key="AutoFarmMori",Script="https://raw.githubusercontent.com/skyemngu13/hee/refs/heads/main/mori"}};for v8,v9 in ipairs(v7) do local v10=0 -0 ;while true do if (v10==(619 -(555 + 64))) then v4[v9.Key]=v4[v9.Key] or false ;v6:AddToggle({Name=v9.Name,Default=v4[v9.Key],Callback=function(v14) v4[v9.Key]=v14;v5();if v14 then task.spawn(function() pcall(function() loadstring(game:HttpGet(v9.Script))();end);end);end end});break;end end end task.spawn(function() task.wait(932 -(857 + 74) );for v11,v12 in ipairs(v7) do if v4[v12.Key] then pcall(function() loadstring(game:HttpGet(v12.Script))();end);end end end);
